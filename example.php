@@ -1,11 +1,4 @@
 <?php
-/***********************************************
- *
- * Simple M3U Playlist Parser 
- * https://github.com/ewwink/SimpleM3UParser
- *
- ***********************************************/
-
 require_once "M3UParser.php";
 
 $m3u = <<<EOF
@@ -37,18 +30,16 @@ EOF;
 # $m3u = file_get_contents("playlist.m3u");
 
 # open from url
-# $parser = new M3UParser('http://localhost/play.m3u');
+# $m3u = 'http://localhost/play.m3u';
 
 
 
 # open multiple url
 /*
-$parser = new M3UParser(
-    array(
-        'http://localhost/a.m3u',
-        'http://localhost/b.m3u',
-        'http://localhost/c.m3u',
-    )
+$m3u = array(
+    'http://localhost/a.m3u',
+    'http://localhost/b.m3u',
+    'http://localhost/c.m3u',
 );
 */
 
