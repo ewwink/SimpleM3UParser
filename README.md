@@ -4,11 +4,25 @@ PHP Simple M3U Playlist Parser, it clean, remove duplicate, and group the playli
 
 ## Usage
 see `example.php`
-```
+```php
 <?php
 require_once  "M3UParser.php";
 
-# variable $m3u can be string, url or list urls
+# open from file
+$m3u = file_get_contents("playlist.m3u");
+
+# open from url
+# $m3u = 'http://localhost/play.m3u';
+
+# open multiple url
+/*
+$m3u = array(
+    'http://localhost/a.m3u',
+    'http://localhost/b.m3u',
+    'http://localhost/c.m3u',
+);
+*/
+
 $parser = new  M3UParser($m3u);
 echo  $parser->text();
 ```
